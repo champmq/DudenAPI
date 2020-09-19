@@ -14,6 +14,9 @@ class DudenAPI
         if (!empty($dom)) {
             $i = 0;
             foreach ($dom->find(".tabloid") as $divClass) {
+                $wortart = explode(", ", $divClass->find(".tuple__val")[0]->plaintext);
+                $infos["wortart"] = $wortart[0];
+                $infos["geschlecht"] = $wortart[1];
                 foreach ($divClass->find("#Bedeutung-1a .enumeration__text") as $bedeutung) {
                     $infos["bedeutung"] = $bedeutung->plaintext;
                 }
@@ -25,6 +28,6 @@ class DudenAPI
                 }
             }
         }
-        return($infos);
+        return ($infos);
     }
 }

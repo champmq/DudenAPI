@@ -20,6 +20,8 @@ print_r($wort);
 
 ```php
 Array (
+    [wortart] => Substantiv
+    [geschlecht] => feminin
     [bedeutung] => das Helfen; das Tätigwerden zu jemandes Unterstützung
     [synonym] => Anstrengung[en], Assistenz, Beistand, Bemühungen
     [herkunft] => mittelhochdeutsch hilfe, althochdeutsch hilfa, zu helfen
